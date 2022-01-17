@@ -147,6 +147,39 @@
                 font-size: 11px
             }
         }
+
+        .console {
+            margin-top: 25px;
+            font-family: 'Fira Mono';
+            width: 700px;
+            height: 150px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+
+        .console header {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            background-color: #555;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #DDD;
+        }
+
+        .console .consolebody {
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-sizing: border-box;
+            padding: 20px;
+            height: calc(100% - 40px);
+            background-color: #000;
+            color: #63de00;
+        }
+
+        .console .consolebody p {
+            line-height: 1.5rem;
+        }
     </style>
 </head>
 
@@ -229,6 +262,15 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
 
+
+            <div class="console" style="margin-top: 50px;">
+                <header>
+                    <p>root@willy</p>
+                </header>
+                <div class="consolebody">
+                    <p>docker run -d -p 80:5000 -v /var/run/docker.sock:/var/run/docker.sock motiio/willy:latest</p>
+                </div>
+            </div>
 
             <section class="features section">
                 <div class="container">
@@ -353,7 +395,7 @@
             <div class="container">
                 <div class="site-footer-inner">
                     <div class="brand footer-brand">
-                    
+
                     </div>
                     <!-- <ul class="footer-links list-reset">
                         <li>
